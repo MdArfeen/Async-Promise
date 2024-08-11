@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*var a=10;//Global scope
+    let b =20;//blocked scope
+    let c;
+    function add(){
+        return a+b+c//Nan
+    }
+    let store=add(a,b,c)
+    console.log(store)
+    */
+   //console.log("hello")
+   //for(i=0;i<=100000000;i++){
+//large loop
+   //}
+   //console.log("world")
+/*function delayedFunction(){
+    console.log("hi , there")
+}
+    */
+//setTimeout(delayedFunction,5000)
+//setTimeout takes 2 parameters(setTimeout,time(ms))
+//1sec=>1000
+/*console.log("one")
+function delayedFunction(){
+    console.log("hi , there")
+}
+setTimeout(delayedFunction ,5000)
+console.log("two")
+*/
+/*console.log("programms starts here")
+function Maruti800(){
+    console.log("Maruti going at 4000ms")
+}
+function Mercedes(){
+    console.log("Mercedes going at 2000ms")
+}
+function BMW(){
+    console.log("BMW going at 3000ms")
+}
+setTimeout(Maruti800,4000)
+setTimeout(Mercedes,2000)
+setTimeout(BMW,3000)
+console.log("programs end here")
+*/
+/*setTimeout(function(){
+    alert("subscribe")
+},5000)
+*/
+//let i=0
+//function printer(){
+    //console.log("hi there",i)
+  //  i++
+//}
+//setInterval(printer,1000)
+// to clear setinterval we use clearInterval
+//create a button and start to built a timer
+
+/*var a=10;
+let b=20;
+function parent(callback){
+    let sum=a+b
+    let call=callback(sum)
+    //let call-print(sum)
+    console.log(call)
+}
+function print(value){
+    return value*10
+
+}
+parent(print)
+*/
+//every js code will create a execution context=>here hoisting /attendance id done for jus var and function
+// let const are not defined in context =>tempororal dead zone
+//event loop=>call stack should be empty && callback queue should not be empty
+
+//promise
+//promise=>it doesnt specify an exact time rather it specifies states
+//fullfilled/rejected/process or ongoing 
+/*let myPromise=new Promise(function (resolve,reject){
+    reject()
+    //resolve()
+})*/
+//console.log(myPromise)=> promise return object
+//promises are there to deal with asny js
+
+function getData(callbackRead){
+    return new Promise(function(resolve, reject){
+        setTimeout(function (){
+    let data=[{name:"virat", matches:"125"}]
+ // callbackRead(data)
+ resolve(data)
+ },4000)
+    })
+}
+
+
+function readData(arr){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){
+   // let arrValue=arr[0].name
+   // calllbackprint(arrValue)
+   resolve(arrValue)
+},2000)
+    })
+}
+
+function printData(value){
+return(value+"hello")
+}
+
+getData()
+.then(function(data){
+    readData(data)
+    console.log(data)
+})
+.then(function (value){
+    printData(value)
+    console.log(value)
+})
+
+//getData(function(arr){
+  //  readData(arr,printData)  
+//})
+    
+//nested callback to create relation b/w different function
+//it creates callback hell
+
+
+
+
+</script>
+</html>
